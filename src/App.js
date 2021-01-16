@@ -12,6 +12,7 @@ import {
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+var Mona = require('../src/Monaco-Editor/Monaco')
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <FormGroup>
               <Input type="textarea" name="text" id="exampleText" />
             </FormGroup>
+            
             <Button type="submit" color="primary">
               Submit
             </Button>
