@@ -15,6 +15,7 @@ import React, { useState } from "react";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [route, setRoute] = useState( '' );
+  const [funk, setFunk] = useState( '' );
 
   const onSubmit = async (event) => {
     // prevent redirect
@@ -26,7 +27,8 @@ function App() {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(
       JSON.stringify({
-        value: route,
+        route: route,
+        funktion: funk,
       })
     );
     // do something asynchronous that takes time, this function is just an example
@@ -53,7 +55,6 @@ function App() {
               <Input
                 type="route"
                 value={route}
-                placeholder="Enter a message"
                 onChange={(e) => setRoute(e.target.value)}
                 name="route"
                 id="route"
@@ -77,7 +78,14 @@ function App() {
         <Row>
           <Col>
             <FormGroup>
-              <Input type="textarea" name="function" id="exampleText" />
+              <Input 
+              value={funk}
+              onChange={(e) => setFunk(e.target.value)}
+              id="funktion"
+              placeholder="console.log('hiworld')"
+              type="textarea" 
+              name="funktion" 
+               />
             </FormGroup>
 
             <Button type="submit" color="primary">
