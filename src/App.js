@@ -14,8 +14,8 @@ import React, { useState } from "react";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
-  const [route, setRoute] = useState( '' );
-  const [funk, setFunk] = useState( '' );
+  const [route, setRoute] = useState("");
+  const [funk, setFunk] = useState("");
 
   const onSubmit = async (event) => {
     // prevent redirect
@@ -78,14 +78,14 @@ function App() {
         <Row>
           <Col>
             <FormGroup>
-              <Input 
-              value={funk}
-              onChange={(e) => setFunk(e.target.value)}
-              id="funktion"
-              placeholder="console.log('hiworld')"
-              type="textarea" 
-              name="funktion" 
-               />
+              <Input
+                value={funk}
+                onChange={(e) => setFunk(e.target.value)}
+                id="funktion"
+                placeholder="console.log('hiworld')"
+                type="textarea"
+                name="funktion"
+              />
             </FormGroup>
 
             <Button type="submit" color="primary">
