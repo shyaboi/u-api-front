@@ -23,7 +23,7 @@ function App() {
 
     setIsLoading(true);
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:4444/api/u-c", true);
+    xhr.open("POST", "http://localhost:4444/api/u-c/new", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(
       JSON.stringify({
