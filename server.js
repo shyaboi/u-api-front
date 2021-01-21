@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
 
 
 app.get('/new/code-editor', function (req, res) {
-   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+   res.sendFile(path.join(__dirname, root, 'index.html'));
  });
 
 app.listen(9001);
